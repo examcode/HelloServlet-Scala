@@ -18,7 +18,14 @@ class DicServlet extends HttpServlet {
 
   override def doGet(req: HttpServletRequest, res: HttpServletResponse) {
     val word = req.getParameter("word")
-    req.setAttribute("word", dic.search(word))
+    val result = dic.search(word)
+
+    if(result == None) {
+      req.setAttribute("word", null)
+    } else {
+      req.setAttribute("word", result.get)
+    }
+
     val dispatcher: RequestDispatcher = req.getRequestDispatcher("/WEB-INF/views/dic/index.jsp")
     dispatcher.forward(req, res)
   }

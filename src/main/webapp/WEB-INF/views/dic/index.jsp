@@ -10,7 +10,5 @@
     Object word =  request.getAttribute("word");
 %>
 <%=word%>
-1312312
-하잉~~131212312ㅇㄴㅁㅇㅁㄴㅁㅇㄴ
 </body>
 </html>
