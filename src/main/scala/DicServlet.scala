@@ -6,13 +6,6 @@ import javax.servlet.http.HttpServletResponse
 import javax.servlet.{RequestDispatcher, ServletException}
 import com.yuilsang.dic.Dic
 
-/**
- * Created with IntelliJ IDEA.
- * User: ilzzang
- * Date: 13. 7. 10.
- * Time: 오후 10:04
- * To change this template use File | Settings | File Templates.
- */
 class DicServlet extends HttpServlet {
   val dic:Dic = new Dic()
 
